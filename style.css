@@ -186,6 +186,30 @@
   font-size: 24px;
 }
 
+/*********BLOCK SEVEN*********/
+
+.blockSeven__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 121px;
+    margin: 0 auto 80px;
+    width: 86.64%;
+}
+
+.blockSeven__text {
+    font-size: 18px;
+    line-height: 26px;
+    color: #464646;
+    font-weight: 300;
+}
+
+.blockSeven__header {
+    text-align: left;
+    width: 75%;
+    margin-bottom: 24px;
+}
+
 /*********BLOCK EIGHT*********/
 
 .blockEight__background {
@@ -212,6 +236,20 @@
   margin-top: 18px;
   width: 576px;
   text-align: center;
+}
+
+.videoContainer {
+    position: relative;
+    z-index: 9;
+    display: grid;
+}
+
+#playButtonCustom {
+    position: absolute;
+    z-index: 99;
+    left: 50%;
+    transform: translateX(-50%);
+    align-self: center;
 }
 
 /*********BLOCK TEN*********/
@@ -258,16 +296,18 @@
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    margin-top: 15px;
 }
 
 .slider__item {
     width: 283px;
 }
 
-.sliderContainer {
+.sliderContainer, .sliderContainerTest {
     display: flex;
     gap: 31px;
     overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 .sectionDivider {
@@ -279,8 +319,13 @@
 
 .slider__arrow {
     position: relative;
+    z-index: 10;
     top: 105px;
     left: 16px;
+}
+
+.slider__arrowPositionFix {
+    left: 21px;
 }
 
 .slider__arrowContainer {
@@ -307,6 +352,21 @@
     margin-bottom: 22px;
     font-size: 18px;
     font-weight: 600;
+}
+
+.slider__text {
+    font-size: 15px;
+    color: #464646;
+    line-height: 26px;
+    font-weight: 400;
+    margin-bottom: 13px;
+}
+
+/*********BLOCK TWELVE********/
+
+.blockTwelve {
+    width: 86.64%;
+    margin: 84px auto 97px;
 }
 
 /*********BLOCK THIRTEEN********/
