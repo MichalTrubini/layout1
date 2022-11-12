@@ -599,6 +599,12 @@
   padding: 12px 21px 11px;
   border-radius: 28px;
   text-align: center;
+  transition: all 0.5s ease;
+}
+
+.comparisonTable__goToProduct:hover {
+    background-color: #2484C6;
+    transition: all 0.5s ease;
 }
 
 .comparisonTable__tagWrapper {
@@ -653,10 +659,12 @@
     background-color:#C2CED6;
 }
 
-.comparisonTable::-webkit-scrollbar-button {
-    background: transparent linear-gradient(180deg, #1C2D5A 0%, #2484C6 100%) 0% 0% no-repeat padding-box;
+.comparisonTable::-webkit-scrollbar-button:single-button:decrement {
+    background:url('images/arrowLeft.svg') no-repeat;
+    background-size: 11px 19px;
 }
 
-.comparisonTable::-webkit-scrollbar-button {
-    background: url('images/arrowLeft.svg') no-repeat
+.comparisonTable::-webkit-scrollbar-button:single-button:increment {
+    background:url('images/arrowRight.svg') no-repeat;
+    background-size: 11px 19px;
 }
