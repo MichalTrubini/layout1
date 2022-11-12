@@ -304,6 +304,10 @@
     align-self: center;
 }
 
+#playButtonCustom:hover {
+    cursor: pointer;
+}
+
 /*********BLOCK TEN*********/
 
 .blockTen {
@@ -409,6 +413,10 @@
     z-index: 10;
     top: 105px;
     left: 16px;
+}
+
+.slider__arrowNext:hover, .slider__arrowPrev:hover {
+    cursor: pointer;
 }
 
 .slider__arrowPositionFix {
