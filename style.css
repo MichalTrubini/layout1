@@ -1,3 +1,7 @@
+.bodyCustom__156asdad {
+    margin: 0;
+}
+
 /***************LAYOUT-1**************/
 
 .layout-1 #celek {
@@ -71,7 +75,7 @@
   display: block;
   background: url("./images/C.png") no-repeat;
   position: absolute;
-  top: -12px;
+  top: -14px;
   left: 0;
   z-index: 99;
   width: 40px;
@@ -131,6 +135,10 @@
 
 #celek .contentHeader__widthFix {
   width: auto;
+}
+
+#celek .blockFour {
+    margin-bottom: 30px;
 }
 
 /*********BLOCK FIVE*********/
@@ -272,6 +280,10 @@
 
 /*********BLOCK NINE*********/
 
+#celek #video__GF65F2 {
+    width: 100%;
+}
+
 #celek .blockNine {
   display: flex;
   flex-direction: column;
@@ -356,8 +368,8 @@
   margin-top: 15px;
 }
 
-#celek .slider__item {
-  width: 283px;
+#celek .slider__image {
+    width: 100%;
 }
 
 #celek .sliderContainer {
@@ -367,8 +379,7 @@
 }
 
 #celek .sliderTypeOne__dummy {
-  width: 240px;
-  height: 462px;
+  width: 19.2%;
   flex: none;
 }
 
@@ -381,7 +392,7 @@
 #celek .blockSeven__top::before,
 #celek .blockSeven__top::after {
   content: "";
-  width: 241px;
+  width: 19.2%;
   height: 462px;
   display: block;
   position: absolute;
@@ -428,6 +439,7 @@
 
 #celek .slider__arrowContainer {
   position: relative;
+  z-index: 999;
 }
 
 #celek .slider__arrowRing {
@@ -483,10 +495,10 @@
 }
 
 #celek .comparisonTable__itemTitle {
-  padding: 29px 56px;
+  padding: 28px 44px;
   text-align: center;
   color: #2484c6;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 18px;
   font-weight: 500;
 }
@@ -686,4 +698,142 @@
   .layout-0 #celek .logoContainer > img {
     width: 28%;
   }
+
+  .layout-0 #celek .contentTitle {
+    margin-bottom: 45px;
+  }
+
+  .layout-0 #celek .contentHeader {
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 18px;
+    width: 85%;
+  }
+
+  .layout-0 #celek .contentText {
+    font-size: 16px;
+  }
+
+  .layout-0 #celek .blockContent {
+    padding: 77px 33px 41px;
+  }
+
+  .layout-0 #celek .blockThree {
+    margin-bottom: 44px;
+  }
+
+  .layout-0 #celek .blockContent__right {
+    padding: 51px 45px 59px 45px;
+}
+
+.layout-0 #celek .blockFive {
+    padding: 34px 63px;
+    gap: 64px;
+}
+
+.layout-0 #celek .highlightsHeading {
+    font-size: 54px;
+}
+
+.layout-0 #celek .highlightsSubtitle {
+    font-size: 18px;
+}
+
+.layout-0 #celek .highlightsText {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.layout-0 #celek .blockSix {
+margin-top: 44px;
+}
+
+.layout-0 #celek .blockNine {
+    width: 93%;
+}
+
+.layout-0 #celek .blockSeven__bottom {
+    width: 93.7%;
+    gap: 78px;
+}
+
+.layout-0 #celek .genericHeader {
+    font-size: 28px;
+    line-height: 38px;
+}
+
+.layout-0 #celek .blockSeven__text {
+    font-size: 16px;
+}
+
+.layout-0 #celek .videoCaption {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.layout-0 #celek .blockTen {
+    padding: 41px 0 75px;
+    border-radius: 0 220px 0 0;
+    margin-bottom: 66px;
+}
+
+.layout-0 #celek .contentsHeader {
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 46px;
+}
+
+.layout-0 #celek .contentsList {
+    font-size: 16px;
+    line-height: 26px;
+    gap: 18px;
+    margin-bottom: 0;
+}
+
+.layout-0 #celek .imageRadius {
+    border-radius: 0 220px 0 0;
+  }
+
+.layout-0 #celek  .slider__header {
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+.layout-0  #celek .sliderTypeTwo {
+    gap: 16px;
+}
+
+.layout-0 #celek .slider__price {
+    margin-bottom: 18px;
+}
+
+.layout-0 #celek .blockTwelve {
+    margin: 58px auto 83px;
+}
+
+.layout-0 #celek .slider__text {
+    font-size: 14px;
+}
+
+.layout-0 #celek .comparisonTable__itemTitle {
+    padding: 29px 56px;
+    font-size: 14px;
+  }
+
+.layout-0 #celek .comparisonTable__text  {
+    font-size: 14px;
+}
+
+.layout-0 #celek .slider__arrowRing {
+    width: 46px;
+    height: 63px;
+    top: 43px;
+  }
+
+.layout-0 #celek  .slider__arrow  {
+    top: 92px;
+    width: 17px;
+    left: 15px;
+}
+
 }
