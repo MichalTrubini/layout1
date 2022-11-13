@@ -1,3 +1,5 @@
+/***************LAYOUT-1**************/
+
 .layout-1 #celek {
   width: 100%;
   max-width: 1250px;
@@ -10,50 +12,50 @@
   margin: 0;
 }
 
-.marginZeroFix {
+#celek .marginZeroFix {
   margin: 0;
 }
 
-.maxWidthFix {
+#celek .maxWidthFix {
   max-width: 100%;
 }
 
-.genericHeader {
-    text-align: center;
-    color: #2484c6;
-    font-size: 34px;
-    line-height: 46px;
-    font-weight: 400;
+#celek .genericHeader {
+  text-align: center;
+  color: #2484c6;
+  font-size: 34px;
+  line-height: 46px;
+  font-weight: 400;
 }
 
-.logoContainer {
+.layout-1 #celek .logoContainer {
   text-align: center;
   margin: 50px 0;
 }
 
-.blockOne {
+#celek .blockOne {
   border-bottom: 3px solid #eaf0f5;
 }
 
-.blockContent {
+#celek .blockContent {
   padding: 55px 84px 35px;
 }
 
-.blockContent__flex {
+#celek .blockContent__flex {
   width: 50%;
   box-sizing: border-box;
   padding: 100px 100px 0 112px;
 }
 
-.blockContent__right {
+#celek .blockContent__right {
   padding: 100px 100px 0 112px;
 }
 
-.blockContent__left {
+#celek .blockContent__left {
   padding: 100px 100px 0 83px;
 }
 
-.contentTitle {
+#celek .contentTitle {
   text-transform: uppercase;
   color: #707070;
   font-size: 14px;
@@ -64,7 +66,7 @@
   padding-left: 15px;
 }
 
-.contentTitle::before {
+#celek .contentTitle::before {
   content: "";
   display: block;
   background: url("./images/C.png") no-repeat;
@@ -76,7 +78,7 @@
   height: 45px;
 }
 
-.contentHeader {
+#celek .contentHeader {
   color: #2484c6;
   font-size: 34px;
   font-weight: 400;
@@ -84,18 +86,18 @@
   width: 65%;
 }
 
-.contentText {
+#celek .contentText {
   color: #464646;
   font-size: 18px;
   line-height: 26px;
   font-weight: 300;
 }
 
-.imageContainer {
+#celek .imageContainer {
   position: relative;
 }
 
-.imageContainer::after {
+#celek .imageContainer::after {
   content: "";
   display: block;
   background: url("./images/imageBorderLogo.png") no-repeat;
@@ -107,33 +109,33 @@
   height: 60px;
 }
 
-.imageRadius {
+#celek .imageRadius {
   border-radius: 0 280px 0 0;
   display: block;
 }
 
-.blockFlex__reverse {
+#celek .blockFlex__reverse {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.blockFlex__normal {
+#celek .blockFlex__normal {
   display: flex;
   flex-direction: row;
 }
 
-.imageWidthFlex {
+#celek .imageWidthFlex {
   width: 50%;
   box-sizing: border-box;
 }
 
-.contentHeader__widthFix {
+#celek .contentHeader__widthFix {
   width: auto;
 }
 
 /*********BLOCK FIVE*********/
 
-.blockFive {
+#celek .blockFive {
   display: flex;
   justify-content: space-between;
   gap: 116px;
@@ -142,7 +144,7 @@
   background: linear-gradient(45deg, #2484c6, #1c2d5a);
 }
 
-.highlightsHeader {
+#celek .highlightsHeader {
   text-align: center;
   margin-bottom: 55px;
   position: relative;
@@ -153,7 +155,7 @@
   justify-content: center;
 }
 
-.highlightsHeader::before {
+#celek .highlightsHeader::before {
   content: "";
   display: block;
   position: absolute;
@@ -166,111 +168,111 @@
   height: 161px;
 }
 
-.highlightsHeading {
+#celek .highlightsHeading {
   font-size: 70px;
   font-weight: 400;
 }
 
-.highlightsHeading__fix {
+#celek .highlightsHeading__fix {
   position: relative;
   top: 10px;
 }
 
-.highlightsText {
+#celek .highlightsText {
   font-size: 18px;
   font-weight: 400;
   line-height: 30px;
 }
 
-.highlightsSubtitle {
+#celek .highlightsSubtitle {
   font-size: 24px;
 }
 
 /*********BLOCK SIX*********/
 
-.blockSix {
-    margin-bottom: 65px;
+#celek .blockSix {
+  margin-bottom: 65px;
 }
 
 /*********BLOCK SEVEN*********/
 
-.blockSeven {
-    position: relative;
+#celek .blockSeven {
+  position: relative;
 }
 
-.sliderTypeOne__counter {
-    background: linear-gradient(227deg, #1C2D5A, #2484C6);
-    width: 90px;
-    height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    position: absolute;
-    z-index: 99;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -45px;
-    font-size: 27px;
-    color: white;
+#celek .sliderTypeOne__counter {
+  background: linear-gradient(227deg, #1c2d5a, #2484c6);
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 99;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -45px;
+  font-size: 27px;
+  color: white;
 }
 
-#sliderCountItem {
-    font-weight: 500;
-    padding-right: 5px;
+#celek #sliderCountItem {
+  font-weight: 500;
+  padding-right: 5px;
 }
 
-#sliderCountTotal {
-    font-weight: 400;
-    padding-left: 5px;
-    opacity: 0.7;
+#celek #sliderCountTotal {
+  font-weight: 400;
+  padding-left: 5px;
+  opacity: 0.7;
 }
 
-.blockSeven__bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 121px;
-    margin: 0 auto 80px;
-    width: 86.64%;
+#celek .blockSeven__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 121px;
+  margin: 0 auto 80px;
+  width: 86.64%;
 }
 
-.blockSeven__text {
-    font-size: 18px;
-    line-height: 26px;
-    color: #464646;
-    font-weight: 300;
+#celek .blockSeven__text {
+  font-size: 18px;
+  line-height: 26px;
+  color: #464646;
+  font-weight: 300;
 }
 
-.blockSeven__header {
-    text-align: left;
-    width: 75%;
-    margin-bottom: 24px;
+#celek .blockSeven__header {
+  text-align: left;
+  width: 75%;
+  margin-bottom: 24px;
 }
 
-.sliderOne__arrow {
-    position: relative;
-    z-index: 10;
-    top: 30px;
-    left: 16px;
+#celek .sliderOne__arrow {
+  position: relative;
+  z-index: 10;
+  top: 30px;
+  left: 16px;
 }
 
-.sliderOne__arrowRing {
-    width: 59px;
-    height: 80px;
-    position: relative;
-    top: -30px;
+#celek .sliderOne__arrowRing {
+  width: 59px;
+  height: 80px;
+  position: relative;
+  top: -30px;
 }
 
 /*********BLOCK EIGHT*********/
 
-.blockEight__background {
+#celek .blockEight__background {
   background: linear-gradient(45deg, #2484c6, #1c2d5a);
 }
 
 /*********BLOCK NINE*********/
 
-.blockNine {
+#celek .blockNine {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -281,7 +283,7 @@
   border-bottom: 3px solid #eaf0f5;
 }
 
-.videoCaption {
+#celek .videoCaption {
   font-size: 16px;
   line-height: 19px;
   color: #253746;
@@ -290,36 +292,35 @@
   text-align: center;
 }
 
-.videoContainer {
-    position: relative;
-    z-index: 9;
-    display: grid;
+#celek .videoContainer {
+  position: relative;
+  z-index: 9;
+  display: grid;
 }
 
-#playButtonCustom {
-    position: absolute;
-    z-index: 99;
-    left: 50%;
-    transform: translateX(-50%);
-    align-self: center;
+#celek #playButtonCustom {
+  position: absolute;
+  z-index: 99;
+  left: 50%;
+  transform: translateX(-50%);
+  align-self: center;
 }
 
-#playButtonCustom:hover {
-    cursor: pointer;
+#celek #playButtonCustom:hover {
+  cursor: pointer;
 }
 
 /*********BLOCK TEN*********/
 
-.blockTen {
+#celek .blockTen {
   background: linear-gradient(45deg, #2484c6, #1c2d5a);
   color: white;
   padding: 47px 0 100px;
   border-radius: 0 280px 0 0;
   margin-bottom: 89px;
-
 }
 
-.contentsHeader {
+#celek .contentsHeader {
   text-align: center;
   font-weight: 400;
   font-size: 34px;
@@ -327,13 +328,13 @@
   margin-bottom: 74px;
 }
 
-.contentsContainer {
+#celek .contentsContainer {
   display: flex;
   justify-content: center;
   gap: 89px;
 }
 
-.contentsList {
+#celek .contentsList {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -343,143 +344,145 @@
 
 /*********BLOCK ELEVEN********/
 
-.blockEleven {
-    width: 86.64%;
-    margin: auto;
+#celek .blockEleven {
+  width: 86.64%;
+  margin: auto;
 }
 
-.slider {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    margin-top: 15px;
+#celek .slider {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 15px;
 }
 
-.slider__item {
-    width: 283px;
+#celek .slider__item {
+  width: 283px;
 }
 
-.sliderContainer {
-    display: flex;
-    overflow: hidden;
-    scroll-behavior: smooth;
+#celek .sliderContainer {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
 }
 
-.sliderTypeOne__dummy {
-    width: 240px;
-    height: 462px;
-    flex: none;
+#celek .sliderTypeOne__dummy {
+  width: 240px;
+  height: 462px;
+  flex: none;
 }
 
-.sliderTypeOne {
-    gap: 21px;
-    margin-bottom: 58px;
-    position: relative;
+#celek .sliderTypeOne {
+  gap: 21px;
+  margin-bottom: 58px;
+  position: relative;
 }
 
-.blockSeven__top::before, .blockSeven__top::after {
-    content: '';
-    width: 241px;
-    height: 462px;
-    display: block;
-    position: absolute;
-    z-index: 99;
-    top: 0;
+#celek .blockSeven__top::before,
+#celek .blockSeven__top::after {
+  content: "";
+  width: 241px;
+  height: 462px;
+  display: block;
+  position: absolute;
+  z-index: 99;
+  top: 0;
 }
 
-.blockSeven__top::before {
-    background: linear-gradient(270deg, #FFFFFF00 0%, #FFFFFF 100%);
-    left: -1px;
+#celek .blockSeven__top::before {
+  background: linear-gradient(270deg, #ffffff00 0%, #ffffff 100%);
+  left: -1px;
 }
 
-.blockSeven__top::after {
-    background: linear-gradient(90deg, #FFFFFF00 0%, #FFFFFF 100%);
-    right: -1px;
+#celek .blockSeven__top::after {
+  background: linear-gradient(90deg, #ffffff00 0%, #ffffff 100%);
+  right: -1px;
 }
 
-.sliderTypeTwo {
-    gap: 28px;
+#celek .sliderTypeTwo {
+  gap: 28px;
 }
 
-.sectionDivider {
-    height: 3px;
-    width: 86%;
-    background-color: #EAF0F5;
-    margin: 41px auto 0;
+#celek .sectionDivider {
+  height: 3px;
+  width: 86%;
+  background-color: #eaf0f5;
+  margin: 41px auto 0;
 }
 
-.slider__arrow {
-    position: relative;
-    z-index: 10;
-    top: 105px;
-    left: 16px;
+#celek .slider__arrow {
+  position: relative;
+  z-index: 10;
+  top: 105px;
+  left: 16px;
 }
 
-.slider__arrowNext:hover, .slider__arrowPrev:hover {
-    cursor: pointer;
+#celek .slider__arrowNext:hover,
+#celek .slider__arrowPrev:hover {
+  cursor: pointer;
 }
 
-.slider__arrowPositionFix {
-    left: 21px;
+#celek .slider__arrowPositionFix {
+  left: 21px;
 }
 
-.slider__arrowContainer {
-    position: relative;
+#celek .slider__arrowContainer {
+  position: relative;
 }
 
-.slider__arrowRing {
-    width: 59px;
-    height: 80px;
-    position: relative;
-    top: 43px;
+#celek .slider__arrowRing {
+  width: 59px;
+  height: 80px;
+  position: relative;
+  top: 43px;
 }
 
-.slider__header {
-    height: 70px;
-    margin-bottom: 16px;
-    font-size: 16px;
-    color: #2484C6;
-    line-height: 24px;
+#celek .slider__header {
+  height: 70px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #2484c6;
+  line-height: 24px;
 }
 
-.slider__price {
-    text-align: center;
-    margin-bottom: 22px;
-    font-size: 18px;
-    font-weight: 600;
+#celek .slider__price {
+  text-align: center;
+  margin-bottom: 22px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
-.slider__text {
-    font-size: 15px;
-    color: #464646;
-    line-height: 26px;
-    font-weight: 400;
-    margin-bottom: 13px;
+#celek .slider__text {
+  font-size: 15px;
+  color: #464646;
+  line-height: 26px;
+  font-weight: 400;
+  margin-bottom: 13px;
 }
 
 /*********BLOCK TWELVE********/
 
-.blockTwelve {
-    width: 86.64%;
-    margin: 84px auto 97px;
+#celek .blockTwelve {
+  width: 86.64%;
+  margin: 84px auto 97px;
 }
 
 /*********BLOCK THIRTEEN********/
 
-.comparisonHeader {
+#celek .comparisonHeader {
   margin-bottom: 30px;
 }
 
-.comparisonTable {
+#celek .comparisonTable {
   overflow-x: scroll;
 }
 
-.comparisonTable__row {
+#celek .comparisonTable__row {
   display: grid;
   grid-template-columns: 245px 289px 289px 289px 289px 289px;
 }
 
-.comparisonTable__itemTitle {
+#celek .comparisonTable__itemTitle {
   padding: 29px 56px;
   text-align: center;
   color: #2484c6;
@@ -488,11 +491,11 @@
   font-weight: 500;
 }
 
-.comparisonTable__origin {
+#celek .comparisonTable__origin {
   position: relative;
 }
 
-.comparisonTable__origin::after {
+#celek .comparisonTable__origin::after {
   content: "";
   display: block;
   width: 245px;
@@ -503,18 +506,18 @@
   z-index: 0;
 }
 
-.comparisonTable__cell {
+#celek .comparisonTable__cell {
   border-top: 1px solid #d9e2e8;
   border-right: 1px solid #d9e2e8;
   display: grid;
 }
 
-.comparisonTable__topImage {
+#celek .comparisonTable__topImage {
   text-align: center;
   padding: 22px 0;
 }
 
-.comparisonTable__mainColumn {
+#celek .comparisonTable__mainColumn {
   color: white;
   position: relative;
   padding: 17px 25px;
@@ -522,7 +525,7 @@
   line-height: 24px;
 }
 
-.comparisonTable__price {
+#celek .comparisonTable__price {
   font-size: 18px;
   color: #253746;
   line-height: 21px;
@@ -532,12 +535,12 @@
   margin-bottom: 17px;
 }
 
-.comparisonTable__rowDivider {
+#celek .comparisonTable__rowDivider {
   display: grid;
   grid-template-columns: 245px 1445px;
 }
 
-.comparisonTable__header {
+#celek .comparisonTable__header {
   color: white;
   position: relative;
   padding: 15px 25px;
@@ -546,11 +549,11 @@
   font-weight: 600;
 }
 
-.comparisonTable__divider {
+#celek .comparisonTable__divider {
   background-color: #d9e2e8;
 }
 
-.comparisonTable__text {
+#celek .comparisonTable__text {
   padding: 17px 32px 17px 28px;
   font-size: 16px;
   color: #333333;
@@ -558,21 +561,21 @@
   font-weight: 400;
 }
 
-.comparisonTable__text-center {
+#celek .comparisonTable__text-center {
   text-align: center;
 }
 
-.comparisonTable__mainColumn-borderTop {
+#celek .comparisonTable__mainColumn-borderTop {
   border-top: 1px solid rgb(34, 72, 122);
 }
 
-.comparisonTable__imageCheckmark {
+#celek .comparisonTable__imageCheckmark {
   padding: 17px 32px 17px 28px;
   display: grid;
   justify-content: center;
 }
 
-.comparisonTable__notApplicable {
+#celek .comparisonTable__notApplicable {
   height: 3px;
   width: 25px;
   display: block;
@@ -581,12 +584,12 @@
   margin: auto;
 }
 
-.comparisonTable__cellBottom {
+#celek .comparisonTable__cellBottom {
   border-top: 1px solid #d9e2e8;
   padding: 28px 0 43px;
 }
 
-.comparisonTable__goToProduct {
+#celek .comparisonTable__goToProduct {
   display: block;
   margin: auto;
   width: 135px;
@@ -602,27 +605,27 @@
   transition: all 0.5s ease;
 }
 
-.comparisonTable__goToProduct:hover {
-    background-color: #2484C6;
-    transition: all 0.5s ease;
+#celek .comparisonTable__goToProduct:hover {
+  background-color: #2484c6;
+  transition: all 0.5s ease;
 }
 
-.comparisonTable__tagWrapper {
-    padding: 4px;
-    background-color: white;
-    display: inline-block;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+#celek .comparisonTable__tagWrapper {
+  padding: 4px;
+  background-color: white;
+  display: inline-block;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.comparisonTable__tagText {
+#celek .comparisonTable__tagText {
   text-align: center;
   color: black;
   font-size: 12px;
   font-weight: 600;
-  white-space: nowrap
+  white-space: nowrap;
 }
 
-.comparisonTable__tagContainer {
+#celek .comparisonTable__tagContainer {
   margin: auto;
   padding: 10px 20px;
   border-radius: 4px;
@@ -632,39 +635,55 @@
   margin-bottom: 15px;
 }
 
-.comparisonTable__tagCurrent {
-  background-color: #92D4FF;
-  box-shadow: 0px 3px 15px #92D4FF;
+#celek .comparisonTable__tagCurrent {
+  background-color: #92d4ff;
+  box-shadow: 0px 3px 15px #92d4ff;
 }
 
-.comparisonTable__tagBestPrice {
-    background-color: #BBC5E4;
-    box-shadow: 0px 3px 15px #BBC5E4;
+#celek .comparisonTable__tagBestPrice {
+  background-color: #bbc5e4;
+  box-shadow: 0px 3px 15px #bbc5e4;
 }
 
-.comparisonTable__tagEffective {
-    background-color: #E4D9BB ;
-    box-shadow: 0px 3px 15px #E4D9BB;
+#celek .comparisonTable__tagEffective {
+  background-color: #e4d9bb;
+  box-shadow: 0px 3px 15px #e4d9bb;
 }
 
-.comparisonTable::-webkit-scrollbar {
-    height: 20px;
+#celek .comparisonTable::-webkit-scrollbar {
+  height: 20px;
+}
+
+#celek .comparisonTable::-webkit-scrollbar-track-piece {
+  background-color: #eaf0f5;
+}
+
+#celek .comparisonTable::-webkit-scrollbar-thumb {
+  background-color: #c2ced6;
+}
+
+#celek .comparisonTable::-webkit-scrollbar-button:single-button:decrement {
+  background: url("images/arrowLeft.svg") no-repeat;
+  background-size: 11px 19px;
+}
+
+#celek .comparisonTable::-webkit-scrollbar-button:single-button:increment {
+  background: url("images/arrowRight.svg") no-repeat;
+  background-size: 11px 19px;
+}
+
+/***************LAYOUT-0**************/
+
+@media screen and (max-width: 950px) {
+  .layout-0 #celek {
+    max-width: 950px;
   }
 
-.comparisonTable::-webkit-scrollbar-track-piece {
-    background-color: #EAF0F5;
-}
+  .layout-0 #celek .logoContainer {
+    margin: 44px auto;
+  }
 
-.comparisonTable::-webkit-scrollbar-thumb {
-    background-color:#C2CED6;
-}
-
-.comparisonTable::-webkit-scrollbar-button:single-button:decrement {
-    background:url('images/arrowLeft.svg') no-repeat;
-    background-size: 11px 19px;
-}
-
-.comparisonTable::-webkit-scrollbar-button:single-button:increment {
-    background:url('images/arrowRight.svg') no-repeat;
-    background-size: 11px 19px;
+  .layout-0 #celek .logoContainer > img {
+    width: 28%;
+  }
 }
