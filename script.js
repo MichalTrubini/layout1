@@ -40,7 +40,8 @@ let flexGap = Number(style.gap.replace('px',''));
 //functions
 
 sliderImagesTypeTwo.forEach(item => {
-    item.style.width = ((sliderTwoWidth - 2 * flexGap)/3) + 'px'
+    if (screenWidth > 825) item.style.width = ((sliderTwoWidth - 2 * flexGap)/3) + 'px';
+    else item.style.width = ((sliderTwoWidth - 1 * flexGap)/2) + 'px'
 })
 
 

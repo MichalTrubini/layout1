@@ -1,5 +1,13 @@
 .bodyCustom__156asdad {
     margin: 0;
+    padding: 0 30px;
+}
+
+@media screen and (max-width:428px) {
+    .bodyCustom__156asdad {
+        padding: 0 16px 0 17px;
+    }
+    
 }
 
 /***************LAYOUT-1**************/
@@ -834,6 +842,59 @@ margin-top: 44px;
     top: 92px;
     width: 17px;
     left: 15px;
+}
+}
+
+/*MOBILE LAYOUT*/
+
+@media screen and (max-width: 428px) {
+
+.mobile #celek .imageRadius {
+    border-radius: 0 110px 0 0;
+}
+
+.mobile #celek .imageContainer::after {
+    width: 25px;
+    height: 32px;
+    background-size: 25px;
+    top: 10px;
+}
+
+.mobile #celek .logoContainer > img {
+    width: 48%;
+}
+
+.mobile #celek .logoContainer {
+    margin: 29px auto 27px;
+}
+
+.mobile #celek .blockContent {
+    padding: 73px 0 30px;
+}
+
+.mobile #celek .contentTitle {
+    margin-bottom: 35px;
+}
+
+.mobile #celek .contentHeader {
+    margin-bottom: 21px;
+    width: 100%;
+}
+
+.mobile #celek .blockFlex__reverse {
+    flex-direction: column;
+}
+
+.mobile #celek .blockContent__flex, .mobile #celek .imageWidthFlex {
+    width: 100%;
+}
+
+.mobile #celek .blockThree {
+    margin-bottom: 88px;
+}
+
+.mobile #celek .blockThirteen, .mobile #celek .blockTwelve .sectionDivider {
+    display: none;
 }
 
 }
