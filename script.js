@@ -28,7 +28,7 @@ const referenceElementWidth = referenceElement.offsetWidth;
 //-->functions
 
 sliderImagesTypeOne.forEach(item => {
-    if (screenWidth > 428) item.style.width = referenceElementWidth + 'px';
+    if (screenWidth > 428) item.style.width = referenceElementWidth + 'px'; //mobile layout starts at 395px + 33px Alza's padding (=428px)
     else item.style.width = 100 + '%';
 })
 
@@ -91,7 +91,7 @@ productContainers.forEach((item, i) => {
 
     let style = getComputedStyle(item);
     let flexGap = Number(style.gap.replace('px',''));
-    let containerWidth = item.children[1].offsetWidth + flexGap;
+    let containerWidth = item.children[1].offsetWidth + flexGap; //second child because in one of the sliders, first child is a dummy element 
     let childrenCount = item.childElementCount;
 
     nxtBtn[i].addEventListener('click', () => {
@@ -106,7 +106,7 @@ productContainers.forEach((item, i) => {
         currentItem.innerHTML = counter;
     })
 
-    if (item.classList.contains('sliderTypeOne')) totalItems.innerHTML = childrenCount - 2;
+    if (item.classList.contains('sliderTypeOne')) totalItems.innerHTML = childrenCount - 2; //-2 because there are two dummy elements
 })
 
 //4.VIDEO
@@ -118,7 +118,7 @@ productContainers.forEach((item, i) => {
 
     const playButton = document.getElementById("playButtonCustom__546SHD");
     const adjWidthScreen = screenWidth > 1250 ? 1250 : screen.width;
-    const videoMargin = screen.width > 950 ? 166 : screen.width < 429 ? 33 : 66;
+    const videoMargin = screen.width > 950 ? 166 : screen.width < 429 ? 33 : 66; //these numbers are based on what layout looks good on the screen 
     const video = document.querySelector("#video__GF65F2")
 
 //-->functions
