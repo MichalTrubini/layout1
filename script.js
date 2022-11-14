@@ -17,22 +17,23 @@ const screenWidth = screen.width;
 //1.SET WIDTH OF SLIDER IMAGE (SLIDER TYPE ONE)
 
 //variables declaration
-const sliderImagesTypeOne = [...document.querySelectorAll('.slider__imageTypeOne')];
-const referenceElement = document.querySelector('.blockSeven__text')
+const sliderImagesTypeOne = [...document.querySelectorAll('#celek .slider__imageTypeOne')];
+const referenceElement = document.querySelector('#blockSeven__text_ref652dsdfg')
 const referenceElementWidth = referenceElement.offsetWidth;
 
 //functions
 
 sliderImagesTypeOne.forEach(item => {
-    item.style.width = referenceElementWidth + 'px'
+    if (screenWidth > 428) item.style.width = referenceElementWidth + 'px';
+    else item.style.width = 100 + '%';
 })
 
 //2.SET WIDTH OF SLIDER IMAGE (SLIDER TYPE TWO)
 
 //variables declaration
 
-const sliderImagesTypeTwo = [...document.querySelectorAll('.slider__imageTypeTwo')];
-const sliderTwo = document.querySelector('.sliderTypeTwo')
+const sliderImagesTypeTwo = [...document.querySelectorAll('#celek .slider__imageTypeTwo')];
+const sliderTwo = document.querySelector('#celek .sliderTypeTwo')
 const sliderTwoWidth = sliderTwo.offsetWidth
 let style = getComputedStyle(sliderTwo);
 let flexGap = Number(style.gap.replace('px',''));
@@ -51,9 +52,9 @@ sliderImagesTypeTwo.forEach(item => {
 
 //variables declaration
 
-const productContainers = [...document.querySelectorAll('.sliderContainer')];
-const nxtBtnAll = [...document.querySelectorAll('.slider__arrowNext')];
-const preBtnAll = [...document.querySelectorAll('.slider__arrowPrev')];
+const productContainers = [...document.querySelectorAll('#celek .sliderContainer')];
+const nxtBtnAll = [...document.querySelectorAll('#celek .slider__arrowNext')];
+const preBtnAll = [...document.querySelectorAll('#celek .slider__arrowPrev')];
 
 const nxtBtn = nxtBtnAll.filter((item) => {
     let style = getComputedStyle(item);
@@ -65,10 +66,8 @@ const preBtn = preBtnAll.filter((item) => {
     if (style.display !== 'none') return item;
 })
 
-console.log(nxtBtn)
-
-const currentItem = document.getElementById('sliderCountItem');
-const totalItems = document.getElementById('sliderCountTotal');
+const currentItem = document.getElementById('sliderCountItem__GX546S2');
+const totalItems = document.getElementById('sliderCountTotal__GX546S2');
 
 let counter = 1
 
@@ -100,7 +99,7 @@ productContainers.forEach((item, i) => {
 
 //variables declaration
 
-    const playButton = document.querySelector("#playButtonCustom");
+    const playButton = document.getElementById("playButtonCustom__546SHD");
     const adjWidthScreen = screenWidth > 1250 ? 1250 : screen.width;
     const videoMargin = screen.width > 950 ? 166 : screen.width < 429 ? 33 : 66;
     const video = document.querySelector("#video__GF65F2")
