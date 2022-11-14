@@ -16,12 +16,16 @@ const screenWidth = screen.width;
 
 //1.SET WIDTH OF SLIDER IMAGE (SLIDER TYPE ONE)
 
-//variables declaration
+//Purpose of this is to set width of slider item based on screen width.
+//This allows to display different number of items on different resolutions
+
+//-->variables declaration
+
 const sliderImagesTypeOne = [...document.querySelectorAll('#celek .slider__imageTypeOne')];
 const referenceElement = document.querySelector('#blockSeven__text_ref652dsdfg')
 const referenceElementWidth = referenceElement.offsetWidth;
 
-//functions
+//-->functions
 
 sliderImagesTypeOne.forEach(item => {
     if (screenWidth > 428) item.style.width = referenceElementWidth + 'px';
@@ -30,7 +34,10 @@ sliderImagesTypeOne.forEach(item => {
 
 //2.SET WIDTH OF SLIDER IMAGE (SLIDER TYPE TWO)
 
-//variables declaration
+//Purpose of this is to set width of slider item based on screen width.
+//This allows to display different number of items on different resolutions
+
+//-->variables declaration
 
 const sliderImagesTypeTwo = [...document.querySelectorAll('#celek .slider__imageTypeTwo')];
 const sliderTwo = document.querySelector('#celek .sliderTypeTwo')
@@ -38,7 +45,7 @@ const sliderTwoWidth = sliderTwo.offsetWidth
 let style = getComputedStyle(sliderTwo);
 let flexGap = Number(style.gap.replace('px',''));
 
-//functions
+//-->functions
 
 sliderImagesTypeTwo.forEach(item => {
     if (screenWidth > 895) item.style.width = ((sliderTwoWidth - 2 * flexGap)/3) + 'px'
@@ -50,7 +57,14 @@ sliderImagesTypeTwo.forEach(item => {
 
 //3.SLIDER
 
-//variables declaration
+//Here we control the basic functionality of sliding images left/right on click.
+// * An array of all sliders is created as well as all next/prev buttons
+// * Using forEach we loop through sliders and add event listeners to next/prev buttons
+// * The order in arrays is essential here to make sure that sliders are controlled by correct buttons
+// * Some buttons are hidden by display none based on resolution, therefore it is neccessary to filter these out (nxtBtnAll --> nxtBtn)
+//Touch control (swipe) not implemented.
+
+//-->variables declaration
 
 const productContainers = [...document.querySelectorAll('#celek .sliderContainer')];
 const nxtBtnAll = [...document.querySelectorAll('#celek .slider__arrowNext')];
@@ -71,7 +85,7 @@ const totalItems = document.getElementById('sliderCountTotal__GX546S2');
 
 let counter = 1
 
-//functions
+//-->functions
 
 productContainers.forEach((item, i) => {
 
@@ -97,14 +111,17 @@ productContainers.forEach((item, i) => {
 
 //4.VIDEO
 
-//variables declaration
+//This allows to play the video by clicking on custom play button
+//Width of the video is controlled by setting inline style width
+
+//-->variables declaration
 
     const playButton = document.getElementById("playButtonCustom__546SHD");
     const adjWidthScreen = screenWidth > 1250 ? 1250 : screen.width;
     const videoMargin = screen.width > 950 ? 166 : screen.width < 429 ? 33 : 66;
     const video = document.querySelector("#video__GF65F2")
 
-//functions
+//-->functions
 
     playButton.addEventListener("click", () => {
         video.play();
