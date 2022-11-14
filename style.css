@@ -480,6 +480,10 @@
   margin-bottom: 13px;
 }
 
+#celek .slider__arrowContainerMobile, .slider__arrowMobile {
+    display: none
+}
+
 /*********BLOCK TWELVE********/
 
 #celek .blockTwelve {
@@ -843,6 +847,11 @@ margin-top: 44px;
     width: 17px;
     left: 15px;
 }
+
+.layout-0  #celek .slider__arrowContainerMobile, .layout-0  #celek .slider__arrowMobile {
+    display: none
+}
+
 }
 
 /*MOBILE LAYOUT*/
@@ -881,7 +890,7 @@ margin-top: 44px;
     width: 100%;
 }
 
-.mobile #celek .blockFlex__reverse {
+.mobile #celek .blockFlex__reverse, .mobile #celek .blockFlex__normal, .mobile #celek .blockFive {
     flex-direction: column;
 }
 
@@ -890,11 +899,79 @@ margin-top: 44px;
 }
 
 .mobile #celek .blockThree {
-    margin-bottom: 88px;
+    margin-bottom: 0px;
 }
 
-.mobile #celek .blockThirteen, .mobile #celek .blockTwelve .sectionDivider {
+.mobile #celek .blockThirteen, .mobile #celek .blockTwelve .sectionDivider, .blockSeven {
     display: none;
+}
+
+.mobile #celek .blockFive {
+    padding: 63px 77px 71px;
+}
+
+.mobile #celek .blockSix {
+    margin-top: 0;
+}
+
+.mobile #celek .videoCaption {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.mobile #celek .blockNine {
+    width: 100%;
+}
+
+.mobile #celek #playButtonCustom {
+    width: 76px;
+}
+
+.mobile #celek .blockTen {
+    padding: 42px 0 63px;
+    border-radius: 0 150px 0 0;
+    margin-bottom: 53px;
+}
+
+.mobile #celek .contentsContainer {
+    flex-direction: column;
+    gap: 0;
+}
+
+.mobile #celek .contentsList {
+    padding-left: 73px;
+}
+
+.mobile #celek .blockEleven, .mobile #celek .blockTwelve {
+    width: 100%;
+}
+
+.mobile #celek .slider__arrowContainer, .mobile #celek .slider__arrowFix {
+    display: none;
+}
+
+.mobile #celek .arrowWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 39px;
+    margin-top: 15px;
+}
+
+.mobile #celek .slider__arrowRing {
+    top: -10px;
+}
+
+.mobile #celek .slider__arrow {
+    top: 36px;
+}
+
+.mobile  #celek .sliderTypeTwo {
+    gap: 31px;
+}
+
+.mobile  #celek .slider__arrowContainerMobile, .mobile  #celek .slider__arrowMobile {
+    display: block;
 }
 
 }

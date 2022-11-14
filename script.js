@@ -40,8 +40,10 @@ let flexGap = Number(style.gap.replace('px',''));
 //functions
 
 sliderImagesTypeTwo.forEach(item => {
-    if (screenWidth > 825) item.style.width = ((sliderTwoWidth - 2 * flexGap)/3) + 'px';
-    else item.style.width = ((sliderTwoWidth - 1 * flexGap)/2) + 'px'
+    if (screenWidth > 895) item.style.width = ((sliderTwoWidth - 2 * flexGap)/3) + 'px'
+    else if (screenWidth > 680 & screenWidth < 896) item.style.width = ((sliderTwoWidth - flexGap)/2) + 'px'
+    else if (screenWidth < 429) item.style.width = ((sliderTwoWidth - 1 * flexGap)/1.5) + 'px'
+    else item.style.width = ((sliderTwoWidth - flexGap)) + 'px'
 })
 
 
@@ -50,8 +52,20 @@ sliderImagesTypeTwo.forEach(item => {
 //variables declaration
 
 const productContainers = [...document.querySelectorAll('.sliderContainer')];
-const nxtBtn = [...document.querySelectorAll('.slider__arrowNext')];
-const preBtn = [...document.querySelectorAll('.slider__arrowPrev')];
+const nxtBtnAll = [...document.querySelectorAll('.slider__arrowNext')];
+const preBtnAll = [...document.querySelectorAll('.slider__arrowPrev')];
+
+const nxtBtn = nxtBtnAll.filter((item) => {
+    let style = getComputedStyle(item);
+    if (style.display !== 'none') return item;
+})
+
+const preBtn = preBtnAll.filter((item) => {
+    let style = getComputedStyle(item);
+    if (style.display !== 'none') return item;
+})
+
+console.log(nxtBtn)
 
 const currentItem = document.getElementById('sliderCountItem');
 const totalItems = document.getElementById('sliderCountTotal');
@@ -88,7 +102,7 @@ productContainers.forEach((item, i) => {
 
     const playButton = document.querySelector("#playButtonCustom");
     const adjWidthScreen = screenWidth > 1250 ? 1250 : screen.width;
-    const videoMargin = screen.width > 950 ? 166 : 66;
+    const videoMargin = screen.width > 950 ? 166 : screen.width < 429 ? 33 : 66;
     const video = document.querySelector("#video__GF65F2")
 
 //functions
