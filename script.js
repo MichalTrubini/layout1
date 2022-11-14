@@ -58,11 +58,11 @@ sliderImagesTypeTwo.forEach(item => {
 //3.SLIDER
 
 //Here we control the basic functionality of sliding images left/right on click.
-// * An array of all sliders is created as well as all next/prev buttons
+// * An array of all sliders is created as well as an array of all next/prev buttons
 // * Using forEach we loop through sliders and add event listeners to next/prev buttons
 // * The order in arrays is essential here to make sure that sliders are controlled by correct buttons
-// * Some buttons are hidden by display none based on resolution, therefore it is neccessary to filter these out (nxtBtnAll --> nxtBtn)
-//Touch control (swipe) not implemented.
+// * Some buttons are hidden by "display: none" based on screen width, therefore it is neccessary to filter these out (nxtBtnAll --> nxtBtn)
+//Touch control (swipe) on mobile/tablet not implemented.
 
 //-->variables declaration
 
