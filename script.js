@@ -89,6 +89,8 @@ sliderImagesTypeTwo.forEach(item => {
 const productContainers = [...document.querySelectorAll('#celek .sliderContainer')];
 const nxtBtnAll = [...document.querySelectorAll('#celek .slider__arrowNext')];
 const preBtnAll = [...document.querySelectorAll('#celek .slider__arrowPrev')];
+const mobileRollerTag = [...document.querySelectorAll('#celek .mobileRollerTag')];
+const contentText = [...document.querySelectorAll('#celek .blockSeven .blockSeven__text')];
 
 const nxtBtn = nxtBtnAll.filter((item) => {
     let style = getComputedStyle(item);
@@ -127,6 +129,13 @@ productContainers.forEach((item, i) => {
     })
 
     if (item.classList.contains('sliderTypeOne')) totalItems.innerHTML = childrenCount - 2; //-2 because there are two dummy elements
+})
+
+mobileRollerTag.forEach((item, i) => {
+    item.addEventListener('click', () => {
+        if (item.src === 'images/minus.png') {item.src === 'images/plus.png'} else item.src = 'images/minus.png'
+        contentText[i].classList.add('lineHeightTest')
+    })
 })
 
 //4.VIDEO
