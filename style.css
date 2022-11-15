@@ -11,7 +11,7 @@
 
 /***************LAYOUT-1**************/
 
-.layout-1 #celek {
+#celek {
   width: 100%;
   max-width: 1250px;
   margin: 0px auto;
@@ -39,7 +39,7 @@
   font-weight: 400;
 }
 
-.layout-1 #celek .logoContainer {
+#celek .logoContainer {
   text-align: center;
   margin: 50px 0;
 }
@@ -215,6 +215,24 @@
   position: relative;
 }
 
+#celek .sliderTypeOne {
+  position: relative;
+}
+
+#celek .slider__arrowContainerLeft,
+#celek .slider__arrowContainerRight {
+  position: absolute;
+  bottom: 0;
+}
+
+#celek .slider__arrowContainerLeft {
+  left: 0;
+}
+
+#celek .slider__arrowContainerRight {
+  right: 0;
+}
+
 #celek .sliderTypeOne__counter {
   background: linear-gradient(227deg, #1c2d5a, #2484c6);
   width: 90px;
@@ -232,24 +250,19 @@
   color: white;
 }
 
-#celek #sliderCountItem {
+#celek .mobileRollerTag {
+  display: none;
+}
+
+#celek #sliderCountItem__GX546S2 {
   font-weight: 500;
   padding-right: 5px;
 }
 
-#celek #sliderCountTotal {
+#celek #sliderCountTotal__GX546S2 {
   font-weight: 400;
   padding-left: 5px;
   opacity: 0.7;
-}
-
-#celek .blockSeven__bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 121px;
-  margin: 0 auto 80px;
-  width: 86.64%;
 }
 
 #celek .slider__mobileBottomContent {
@@ -270,17 +283,34 @@
 }
 
 #celek .sliderOne__arrow {
-  position: relative;
+  position: absolute;
   z-index: 10;
-  top: 30px;
+  top: 32px;
+}
+
+#celek .sliderOne__arrowLeft {
   left: 16px;
+}
+
+#celek .sliderOne__arrowRight {
+  right: 16px;
+}
+
+#celek .slider__arrowContainerSliderOne {
+  background-color: white;
+  z-index: 99;
+  position: absolute;
 }
 
 #celek .sliderOne__arrowRing {
   width: 59px;
   height: 80px;
-  position: relative;
-  top: -30px;
+  position: absolute;
+  top: 10px;
+}
+
+#celek .sliderOne__RingRight {
+  right: 0;
 }
 
 #celek .slider__headerMobile {
@@ -289,14 +319,38 @@
 
 /*********BLOCK EIGHT*********/
 
-#celek .blockEight__background {
-  background: linear-gradient(45deg, #2484c6, #1c2d5a);
+#celek .blockEight {
+  margin: 77px 0;
+  background: url("images/arc.JPG") no-repeat;
+  background-position-y: 80px;
+  background-size: contain;
+}
+
+#celek .blockEight__imageContainer {
+  text-align: center;
+}
+
+#celek .blockEight__image {
+  width: 30%;
+  max-width: 383px;
+  margin: auto;
+}
+
+#celek .blockEight__text {
+  color: rgb(45, 62, 77);
+  font-style: italic;
+  font-size: 24px;
+  line-height: 38px;
+  width: 60%;
+  margin: auto;
+  text-align: center;
 }
 
 /*********BLOCK NINE*********/
 
 #celek #video__GF65F2 {
   width: 100%;
+  text-align: center;
 }
 
 #celek .blockNine {
@@ -400,7 +454,6 @@
 
 #celek .sliderTypeOne {
   gap: 21px;
-  margin-bottom: 58px;
   position: relative;
 }
 
@@ -408,11 +461,15 @@
 #celek .blockSeven__top::after {
   content: "";
   width: 19.2%;
-  height: 462px;
+  height: 490px;
   display: block;
   position: absolute;
-  z-index: 99;
+  z-index: 9;
   top: 0;
+}
+
+#celek .sliderTypeOne__imageContainer {
+  margin-bottom: 44px;
 }
 
 #celek .blockSeven__top::before {
@@ -446,10 +503,6 @@
 #celek .slider__arrowNext:hover,
 #celek .slider__arrowPrev:hover {
   cursor: pointer;
-}
-
-#celek .slider__arrowPositionFix {
-  left: 21px;
 }
 
 #celek .slider__arrowContainer {
@@ -776,14 +829,13 @@
     width: 93%;
   }
 
-  .layout-0 #celek .blockSeven__bottom {
-    width: 93.7%;
-    gap: 78px;
-  }
-
   .layout-0 #celek .genericHeader {
     font-size: 28px;
     line-height: 38px;
+  }
+
+  .layout-0 #celek .mobileRollerTag {
+    display: none;
   }
 
   .layout-0 #celek .blockSeven__text {
@@ -870,6 +922,10 @@
 /*MOBILE LAYOUT*/
 
 @media screen and (max-width: 428px) {
+  .mobile #celek {
+    max-width: 395px;
+  }
+
   .mobile #celek .imageRadius {
     border-radius: 0 110px 0 0;
   }
@@ -913,19 +969,9 @@
     margin-top: 9px;
   }
 
-  .mobile #celek .mobileMinusTag {
+  .mobile #celek .mobileRollerTag {
     position: relative;
-  }
-
-  .mobile #celek .mobileMinusTag::after {
-    content: "";
-    width: 57px;
-    height: 57px;
     display: block;
-    position: absolute;
-    bottom: -30px;
-    right: 0;
-    background: url("images/mobileMinus.png") no-repeat;
   }
 
   .mobile #celek .blockFlex__reverse,
@@ -936,8 +982,7 @@
   }
 
   .mobile #celek .blockContent__flex,
-  .mobile #celek .imageWidthFlex,
-  .mobile #celek .blockSeven__bottom {
+  .mobile #celek .imageWidthFlex {
     width: 100%;
   }
 
@@ -951,7 +996,7 @@
   .mobile #celek .blockSeven__top::before,
   .mobile #celek .blockSeven__top::after,
   .mobile #celek .sliderTypeOne__dummy,
-  .mobile #celek .blockSeven__bottom {
+  .mobile #celek .slider__arrowContainerSliderOne {
     display: none;
   }
 
@@ -1013,6 +1058,10 @@
     margin-top: 15px;
   }
 
+  .mobile #celek .sliderTypeOne__imageContainer {
+    margin-bottom: 9px;
+  }
+
   .mobile #celek .slider__arrowRing {
     top: -10px;
   }
@@ -1026,8 +1075,14 @@
   }
 
   .mobile #celek .slider__arrowContainerMobile,
-  .mobile #celek .slider__arrowMobile, 
+  .mobile #celek .slider__arrowMobile,
   .mobile #celek .slider__mobileBottomContent {
     display: block;
+  }
+
+  .mobile #celek .mobileRollerTag__plus {
+    position: absolute;
+    right: 0;
+    bottom: -25px;
   }
 }

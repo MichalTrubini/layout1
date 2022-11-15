@@ -13,6 +13,7 @@
 //variables declaration
 
 const screenWidth = screen.width;
+const adjWidthScreen = screenWidth > 1250 ? 1250 : screen.width;
 
 //1.SET WIDTH OF SLIDER IMAGE (SLIDER TYPE ONE)
 
@@ -22,15 +23,34 @@ const screenWidth = screen.width;
 //-->variables declaration
 
 const sliderImagesTypeOne = [...document.querySelectorAll('#celek .slider__imageTypeOne')];
-const referenceElement = document.querySelector('#blockSeven__text_ref652dsdfg')
-const referenceElementWidth = referenceElement.offsetWidth;
+const arrowContainer = [...document.querySelectorAll('#celek .slider__arrowContainerSliderOne')];
+const sliderItemDummy = [...document.querySelectorAll('#celek .sliderTypeOne__dummy')];
+const sliderTypeOne = document.querySelector('#celek .sliderTypeOne')
 
 //-->functions
 
 sliderImagesTypeOne.forEach(item => {
-    if (screenWidth > 428) item.style.width = referenceElementWidth + 'px'; //mobile layout starts at 395px + 33px Alza's padding (=428px)
+    if (screenWidth > 1035) item.style.width = '772px'
+    else if (screenWidth > 500) {item.style.width = (screenWidth * 0.6) + 'px'} //mobile layout starts at 395px + 33px Alza's padding (=428px)
     else item.style.width = 100 + '%';
 })
+
+window.addEventListener('DOMContentLoaded', (event) => {
+
+    const referenceElement = document.querySelector('#celek .blockSeven__textContainer');
+    const referenceElementHeight = referenceElement.offsetHeight
+    let style = getComputedStyle(sliderTypeOne);
+    let flexGap = Number(style.gap.replace('px',''));
+
+    sliderItemDummy.forEach(item => {
+        item.style.width = (adjWidthScreen - sliderImagesTypeOne[0].offsetWidth - 2*flexGap)/2 + 'px'
+    })
+
+    arrowContainer.forEach(item => {
+        item.style.height = referenceElementHeight + 'px';
+        item.style.width = sliderItemDummy[0].offsetWidth + 'px'
+    })
+  });
 
 //2.SET WIDTH OF SLIDER IMAGE (SLIDER TYPE TWO)
 
@@ -117,7 +137,6 @@ productContainers.forEach((item, i) => {
 //-->variables declaration
 
     const playButton = document.getElementById("playButtonCustom__546SHD");
-    const adjWidthScreen = screenWidth > 1250 ? 1250 : screen.width;
     const videoMargin = screen.width > 950 ? 166 : screen.width < 429 ? 33 : 66; //these numbers are based on what layout looks good on the screen 
     const video = document.querySelector("#video__GF65F2")
 
