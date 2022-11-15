@@ -133,8 +133,12 @@ productContainers.forEach((item, i) => {
 
 mobileRollerTag.forEach((item, i) => {
     item.addEventListener('click', () => {
-        if (item.src === 'images/minus.png') {item.src === 'images/plus.png'} else item.src = 'images/minus.png'
-        contentText[i].classList.add('lineHeightTest')
+
+        if (item.getAttribute("src") === 'images/minus.png') item.src = 'images/plus.png'
+        else item.src = 'images/minus.png';
+        
+        if(contentText[i].classList.contains('blockSeven__textHidden')) contentText[i].classList.remove('blockSeven__textHidden')
+        else contentText[i].classList.add('blockSeven__textHidden')
     })
 })
 
