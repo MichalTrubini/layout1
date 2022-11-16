@@ -5,6 +5,7 @@
 //2.SET WIDTH OF SLIDER IMAGE (SLIDER TYPE TWO)
 //3.SLIDER
 //4.VIDEO
+//5.SCROLLBAR
 //
 //***
 
@@ -12,8 +13,8 @@
 
 //variables declaration
 
-const screenWidth = screen.width;
-const adjWidthScreen = screenWidth > 1250 ? 1250 : screen.width;
+const screenWidth = document.body.clientWidth;
+const adjWidthScreen = screenWidth > 1250 ? 1250 : screenWidth;
 
 //1.SET WIDTH OF SLIDER IMAGE (SLIDER TYPE ONE)
 
@@ -41,9 +42,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const referenceElementHeight = referenceElement.offsetHeight
     let style = getComputedStyle(sliderTypeOne);
     let flexGap = Number(style.gap.replace('px',''));
+    const AlzaPadding = adjWidthScreen > 950 ? 60 : adjWidthScreen < 429 ? 33 : 60; //these numbers are based on what layout looks good on the screen
 
+    console.log(adjWidthScreen, sliderImagesTypeOne[0].offsetWidth, flexGap)
     sliderItemDummy.forEach(item => {
-        item.style.width = (adjWidthScreen - sliderImagesTypeOne[0].offsetWidth - 2*flexGap)/2 + 'px'
+        if(screenWidth > 1250) item.style.width = (adjWidthScreen - sliderImagesTypeOne[0].offsetWidth - 2 * flexGap )/2 + 'px'
+        else {item.style.width = (adjWidthScreen - sliderImagesTypeOne[0].offsetWidth - 2 * flexGap - AlzaPadding)/2 + 'px'}
     })
 
     arrowContainer.forEach(item => {
@@ -161,3 +165,30 @@ mobileRollerTag.forEach((item, i) => {
         playButton.style.display = 'none';
         video.style.width = adjWidthScreen - videoMargin +'px'
   });
+
+//5.SCROLLBAR
+
+//-->variables declaration
+
+const comparisonTable = document.querySelector("#celek .comparisonTable");
+const comparisonTableWidth = comparisonTable.scrollWidth;
+const comparisonTableDummy = document.querySelector("#celek .comparisonTable__dummy");
+const comparisonTableDummyContainer = document.querySelector("#celek .comparisonTableContainer__dummy");
+
+//-->functions
+
+comparisonTableDummy.style.width = comparisonTableWidth + 'px';
+
+comparisonTable.addEventListener('scroll', () => {
+    
+    let userScroll = comparisonTable.scrollLeft
+
+    comparisonTableDummyContainer.scrollLeft = userScroll
+})
+
+comparisonTableDummyContainer.addEventListener('scroll', () => {
+    
+    let userScroll = comparisonTableDummyContainer.scrollLeft
+    
+    comparisonTable.scrollLeft = userScroll
+})

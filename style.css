@@ -275,6 +275,7 @@
   color: #464646;
   font-weight: 300;
   max-height: 500px;
+  margin-bottom: 30px;
   animation: all 0.5s ease;
 }
 
@@ -321,21 +322,34 @@
 
 /*********BLOCK EIGHT*********/
 
+/*  background: url("images/arc.JPG") no-repeat;
+  background-position-y: 80px;
+  background-size: auto;*/
+
 #celek .blockEight {
   margin: 77px 0;
-  background: url("images/arc.JPG") no-repeat;
-  background-position-y: 80px;
-  background-size: contain;
 }
 
 #celek .blockEight__imageContainer {
   text-align: center;
+  position: relative;
+}
+
+#celek .blockEight__arcBackground {
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    object-fit: cover;
+    width: 1250px;
+    height: 345px;
 }
 
 #celek .blockEight__image {
   width: 30%;
   max-width: 383px;
   margin: auto;
+  position: relative;
+  z-index: 9;
 }
 
 #celek .blockEight__text {
@@ -346,6 +360,8 @@
   width: 60%;
   margin: auto;
   text-align: center;
+  position: relative;
+  z-index: 10;
 }
 
 /*********BLOCK NINE*********/
@@ -450,7 +466,6 @@
 }
 
 #celek .sliderTypeOne__dummy {
-  width: 19.2%;
   flex: none;
 }
 
@@ -737,27 +752,48 @@
   box-shadow: 0px 3px 15px #e4d9bb;
 }
 
-#celek .comparisonTable::-webkit-scrollbar {
+#celek .comparisonTable::-webkit-scrollbar,
+#celek .comparisonTableContainer__dummy::-webkit-scrollbar {
   height: 20px;
 }
 
-#celek .comparisonTable::-webkit-scrollbar-track-piece {
+#celek .comparisonTable::-webkit-scrollbar-track-piece,
+#celek .comparisonTableContainer__dummy::-webkit-scrollbar-track-piece {
   background-color: #eaf0f5;
+  border-radius: 5px;
 }
 
-#celek .comparisonTable::-webkit-scrollbar-thumb {
+#celek .comparisonTable::-webkit-scrollbar-thumb,
+#celek .comparisonTableContainer__dummy::-webkit-scrollbar-thumb {
   background-color: #c2ced6;
+  border-radius: 3px;
 }
 
-#celek .comparisonTable::-webkit-scrollbar-button:single-button:decrement {
+#celek .comparisonTable::-webkit-scrollbar-button:single-button:decrement,
+#celek .comparisonTableContainer__dummy::-webkit-scrollbar-button:single-button:decrement {
   background: url("images/arrowLeft.svg") no-repeat;
   background-size: 11px 19px;
+ 
 }
 
-#celek .comparisonTable::-webkit-scrollbar-button:single-button:increment {
+#celek .comparisonTable::-webkit-scrollbar-button:single-button:increment,
+#celek .comparisonTableContainer__dummy::-webkit-scrollbar-button:single-button:increment {
   background: url("images/arrowRight.svg") no-repeat;
-  background-size: 11px 19px;
+  background-size: 11px 19px; 
+  background-position-x: 5px;
 }
+
+#celek .comparisonTableContainer__dummy {
+    height: 20px;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+#celek .comparisonTable__dummy {
+    height: 20px;
+}
+
 
 /***************LAYOUT-0**************/
 
@@ -1035,6 +1071,7 @@
 
   .mobile #celek .blockSeven__textHidden {
     max-height: 0;
+    margin: 0;
     animation: all  0.5s ease;
 }
 
@@ -1093,4 +1130,14 @@
     right: 0;
     bottom: -25px;
   }
+
+  .mobile #celek .blockEight__image {
+    width: 50%;
+  }
+
+  .mobile #celek .blockEight__arcBackground {
+    bottom: -65px;
+    height: 230px;
+  } 
+
 }
