@@ -336,7 +336,7 @@
     left: 0;
     z-index: 0;
     object-fit: cover;
-    width: 1250px;
+    width: 100%;
     height: 345px;
     bottom: -50px;
 }
@@ -511,7 +511,6 @@
   position: relative;
   z-index: 10;
   top: 105px;
-  left: 16px;
 }
 
 #celek .slider__arrowNext:hover,
@@ -557,6 +556,14 @@
 #celek .slider__arrowContainerMobile,
 .slider__arrowMobile {
   display: none;
+}
+
+#celek .slider__arrowLeft {
+    left: 15px;
+}
+
+#celek .slider__arrowRight {
+    right: -21px;
 }
 
 /*********BLOCK TWELVE********/
@@ -944,7 +951,6 @@
   .layout-0 #celek .slider__arrow {
     top: 92px;
     width: 17px;
-    left: 15px;
   }
 
   .layout-0 #celek .slider__arrowContainerMobile,
@@ -952,6 +958,29 @@
   .layout-0 #celek .slider__mobileBottomContent {
     display: none;
   }
+
+  .layout-0 #celek .slider__arrowLeft {
+    left: 13px;
+  }
+
+  .layout-0 #celek .slider__arrowRight {
+    right: -17px;
+  }
+
+  .layout-0 #celek .blockEight__arcBackground {
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 345px;
+    bottom: calc(-50px - (100vw * 0.04));
+}
+
+.layout-0 #celek .blockEight__image {
+    width: 45%;
+}
+
 }
 
 /*MOBILE LAYOUT*/
@@ -1071,15 +1100,22 @@
     margin-bottom: 53px;
   }
 
+  .mobile #celek .blockSeven__text {
+    margin-bottom: 30px;
+  }
+
   .mobile #celek .blockSeven__textHidden {
     max-height: 0;
-    margin: 0;
+    margin-bottom: 0;
     animation: all  0.5s ease;
+}
+
+.mobile #celek .blockEight__text {
+    width: 80%;
 }
 
 .mobile #celek .slider__arrow {
     width: 17px;
-    left: 15px;
 }
 
   .mobile #celek .contentsContainer {
@@ -1118,7 +1154,7 @@
   }
 
   .mobile #celek .slider__arrow {
-    top: 36px;
+    top: 35px;
   }
 
   .mobile #celek .sliderTypeTwo {
@@ -1143,12 +1179,19 @@
   }
 
   .mobile #celek .blockEight__arcBackground {
-    bottom: -65px;
+    bottom: -80px;
     height: 230px;
   } 
 
-  .mobile #celek .blockSeven__text {
-    margin-bottom: 30px;
+  .mobile #celek .blockEight {
+    margin: 25px 0 89px;
   }
 
+  .mobile #celek .slider__arrowLeft {
+    left: 13px;
+  }
+
+  .mobile #celek .slider__arrowRight {
+    right: -17px;
+  }
 }
