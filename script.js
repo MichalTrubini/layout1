@@ -43,8 +43,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let style = getComputedStyle(sliderTypeOne);
     let flexGap = Number(style.gap.replace('px',''));
     const AlzaPadding = adjWidthScreen > 950 ? 60 : adjWidthScreen < 429 ? 33 : 60; //these numbers are based on what layout looks good on the screen
-
-    console.log(adjWidthScreen, sliderImagesTypeOne[0].offsetWidth, flexGap)
+    
     sliderItemDummy.forEach(item => {
         if(screenWidth > 1250) item.style.width = (adjWidthScreen - sliderImagesTypeOne[0].offsetWidth - 2 * flexGap )/2 + 'px'
         else {item.style.width = (adjWidthScreen - sliderImagesTypeOne[0].offsetWidth - 2 * flexGap - AlzaPadding)/2 + 'px'}
