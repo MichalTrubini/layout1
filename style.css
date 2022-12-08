@@ -601,6 +601,11 @@
   font-weight: 500;
 }
 
+#celek .comparisonTable__itemTitle > a {
+color: inherit;
+text-decoration: none;
+}
+
 #celek .comparisonTable__origin {
   position: relative;
 }
