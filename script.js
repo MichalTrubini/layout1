@@ -191,3 +191,52 @@ comparisonTableDummyContainer.addEventListener('scroll', () => {
     
     comparisonTable.scrollLeft = userScroll
 })
+
+//6. TABLE
+
+const tableTitle = document.querySelectorAll('.comparisonTable__titleContainer')
+const tableTypeSurface = document.querySelectorAll('.comparisonTable__textOne')
+const tableUseSurface = document.querySelectorAll('.comparisonTable__textTwo')
+const tableFunction = document.querySelectorAll('.comparisonTable__textThree')
+
+let tableTitleHeight = []
+let tableTypeSurfaceHeight = []
+let tableUseSurfaceHeight = []
+let tableFunctionHeight = []
+
+tableTitle.forEach(item => {
+    tableTitleHeight.push(item.offsetHeight)
+})
+
+tableTypeSurface.forEach(item => {
+    tableTypeSurfaceHeight.push(item.offsetHeight)
+})
+
+tableUseSurface.forEach(item => {
+    tableUseSurfaceHeight.push(item.offsetHeight)
+})
+
+tableFunction.forEach(item => {
+    tableFunctionHeight.push(item.offsetHeight)
+})
+
+window.addEventListener("load", (event) => {
+    tableTitle.forEach(item => {
+        item.style.height = Math.max(...tableTitleHeight) + 'px'
+    })
+    tableTypeSurface.forEach(item => {
+        item.style.height = Math.max(...tableTypeSurfaceHeight) + 'px'
+    })
+    tableUseSurface.forEach(item => {
+        item.style.height = Math.max(...tableUseSurfaceHeight) + 'px'
+    })
+    tableFunction.forEach(item => {
+        item.style.height = Math.max(...tableFunctionHeight) + 'px'
+    })
+    
+    document.querySelector('.comparisonTable__columnMain--typeSurface').style.height = Math.max(...tableTypeSurfaceHeight) + 'px'
+    document.querySelector('.comparisonTable__columnMain--function').style.height = Math.max(...tableFunctionHeight) + 'px'
+    document.querySelector('.comparisonTable__columnMain--useSurface').style.height = Math.max(...tableUseSurfaceHeight) + 'px'
+    document.querySelector('.comparisonTable__blank').style.height = Math.max(...tableTitleHeight) + 'px'
+    
+  });
