@@ -467,6 +467,7 @@
 
 #celek .sliderTypeOne__dummy {
   flex: none;
+  min-height: 100px;
 }
 
 #celek .sliderTypeOne {

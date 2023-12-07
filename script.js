@@ -36,7 +36,7 @@ sliderImagesTypeOne.forEach(item => {
     else item.style.width = 100 + '%';
 })
 
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('load', (event) => {
 
     const referenceElement = document.querySelector('#celek .blockSeven__textContainer');
     const referenceElementHeight = referenceElement.offsetHeight
