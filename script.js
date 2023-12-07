@@ -23,37 +23,57 @@ const adjWidthScreen = screenWidth > 1250 ? 1250 : screenWidth;
 
 //-->variables declaration
 
-const sliderImagesTypeOne = [...document.querySelectorAll('#celek .slider__imageTypeOne')];
-const arrowContainer = [...document.querySelectorAll('#celek .slider__arrowContainerSliderOne')];
-const sliderItemDummy = [...document.querySelectorAll('#celek .sliderTypeOne__dummy')];
-const sliderTypeOne = document.querySelector('#celek .sliderTypeOne')
+const sliderImagesTypeOne = [
+  ...document.querySelectorAll("#celek .slider__imageTypeOne"),
+];
+const arrowContainer = [
+  ...document.querySelectorAll("#celek .slider__arrowContainerSliderOne"),
+];
+const sliderItemDummy = [
+  ...document.querySelectorAll("#celek .sliderTypeOne__dummy"),
+];
+const sliderTypeOne = document.querySelector("#celek .sliderTypeOne");
 
 //-->functions
 
-sliderImagesTypeOne.forEach(item => {
-    if (screenWidth > 1035) item.style.width = '772px'
-    else if (screenWidth > 500) {item.style.width = (screenWidth * 0.6) + 'px'} //mobile layout starts at 395px + 33px Alza's padding (=428px)
-    else item.style.width = 100 + '%';
-})
+sliderImagesTypeOne.forEach((item) => {
+  if (screenWidth > 1035) item.style.width = "772px";
+  else if (screenWidth > 500) {
+    item.style.width = screenWidth * 0.6 + "px";
+  } //mobile layout starts at 395px + 33px Alza's padding (=428px)
+  else item.style.width = 100 + "%";
+});
 
-window.addEventListener('load', (event) => {
+const referenceElement = document.querySelector(
+  "#celek .blockSeven__textContainer"
+);
+const referenceElementHeight = referenceElement.offsetHeight;
+let computedStyle = getComputedStyle(sliderTypeOne);
+let flexGapEl = Number(computedStyle.gap.replace("px", ""));
 
-    const referenceElement = document.querySelector('#celek .blockSeven__textContainer');
-    const referenceElementHeight = referenceElement.offsetHeight
-    let style = getComputedStyle(sliderTypeOne);
-    let flexGap = Number(style.gap.replace('px',''));
-    const AlzaPadding = adjWidthScreen > 950 ? 60 : adjWidthScreen < 429 ? 33 : 60; //these numbers are based on what layout looks good on the screen
-    
-    sliderItemDummy.forEach(item => {
-        if(screenWidth > 1250) item.style.width = (adjWidthScreen - sliderImagesTypeOne[0].offsetWidth - 2 * flexGap )/2 + 'px'
-        else {item.style.width = (adjWidthScreen - sliderImagesTypeOne[0].offsetWidth - 2 * flexGap - AlzaPadding)/2 + 'px'}
-    })
+const AlzaPadding = adjWidthScreen > 950 ? 60 : adjWidthScreen < 429 ? 33 : 60; //these numbers are based on what layout looks good on the screen
 
-    arrowContainer.forEach(item => {
-        item.style.height = referenceElementHeight + 'px';
-        item.style.width = sliderItemDummy[0].offsetWidth + 'px'
-    })
-  });
+sliderItemDummy.forEach((item) => {
+  if (screenWidth > 1250)
+    item.style.width =
+      (adjWidthScreen - sliderImagesTypeOne[0].offsetWidth - 2 * flexGapEl) /
+        2 +
+      "px";
+  else {
+    item.style.width =
+      (adjWidthScreen -
+        sliderImagesTypeOne[0].offsetWidth -
+        2 * flexGapEl -
+        AlzaPadding) /
+        2 +
+      "px";
+  }
+});
+
+arrowContainer.forEach((item) => {
+  item.style.height = referenceElementHeight + "px";
+  item.style.width = sliderItemDummy[0].offsetWidth + "px";
+});
 
 //2.SET WIDTH OF SLIDER IMAGE (SLIDER TYPE TWO)
 
@@ -62,21 +82,25 @@ window.addEventListener('load', (event) => {
 
 //-->variables declaration
 
-const sliderImagesTypeTwo = [...document.querySelectorAll('#celek .slider__imageTypeTwo')];
-const sliderTwo = document.querySelector('#celek .sliderTypeTwo')
-const sliderTwoWidth = sliderTwo.offsetWidth
+const sliderImagesTypeTwo = [
+  ...document.querySelectorAll("#celek .slider__imageTypeTwo"),
+];
+const sliderTwo = document.querySelector("#celek .sliderTypeTwo");
+const sliderTwoWidth = sliderTwo.offsetWidth;
 let style = getComputedStyle(sliderTwo);
-let flexGap = Number(style.gap.replace('px',''));
+let flexGap = Number(style.gap.replace("px", ""));
 
 //-->functions
 
-sliderImagesTypeTwo.forEach(item => {
-    if (screenWidth > 895) item.style.width = ((sliderTwoWidth - 2 * flexGap)/3) + 'px'
-    else if (screenWidth > 680 & screenWidth < 896) item.style.width = ((sliderTwoWidth - flexGap)/2) + 'px'
-    else if (screenWidth < 429) item.style.width = ((sliderTwoWidth - 1 * flexGap)/1.5) + 'px'
-    else item.style.width = ((sliderTwoWidth - flexGap)) + 'px'
-})
-
+sliderImagesTypeTwo.forEach((item) => {
+  if (screenWidth > 895)
+    item.style.width = (sliderTwoWidth - 2 * flexGap) / 3 + "px";
+  else if ((screenWidth > 680) & (screenWidth < 896))
+    item.style.width = (sliderTwoWidth - flexGap) / 2 + "px";
+  else if (screenWidth < 429)
+    item.style.width = (sliderTwoWidth - 1 * flexGap) / 1.5 + "px";
+  else item.style.width = sliderTwoWidth - flexGap + "px";
+});
 
 //3.SLIDER
 
@@ -89,61 +113,68 @@ sliderImagesTypeTwo.forEach(item => {
 
 //-->variables declaration
 
-const productContainers = [...document.querySelectorAll('#celek .sliderContainer')];
-const nxtBtnAll = [...document.querySelectorAll('#celek .slider__arrowNext')];
-const preBtnAll = [...document.querySelectorAll('#celek .slider__arrowPrev')];
-const mobileRollerTag = [...document.querySelectorAll('#celek .mobileRollerTag')];
-const contentText = [...document.querySelectorAll('#celek .blockSeven .blockSeven__text')];
+const productContainers = [
+  ...document.querySelectorAll("#celek .sliderContainer"),
+];
+const nxtBtnAll = [...document.querySelectorAll("#celek .slider__arrowNext")];
+const preBtnAll = [...document.querySelectorAll("#celek .slider__arrowPrev")];
+const mobileRollerTag = [
+  ...document.querySelectorAll("#celek .mobileRollerTag"),
+];
+const contentText = [
+  ...document.querySelectorAll("#celek .blockSeven .blockSeven__text"),
+];
 
 const nxtBtn = nxtBtnAll.filter((item) => {
-    let style = getComputedStyle(item);
-    if (style.display !== 'none') return item;
-})
+  let style = getComputedStyle(item);
+  if (style.display !== "none") return item;
+});
 
 const preBtn = preBtnAll.filter((item) => {
-    let style = getComputedStyle(item);
-    if (style.display !== 'none') return item;
-})
+  let style = getComputedStyle(item);
+  if (style.display !== "none") return item;
+});
 
-const currentItem = document.getElementById('sliderCountItem__GX546S2');
-const totalItems = document.getElementById('sliderCountTotal__GX546S2');
+const currentItem = document.getElementById("sliderCountItem__GX546S2");
+const totalItems = document.getElementById("sliderCountTotal__GX546S2");
 
-let counter = 1
+let counter = 1;
 
 //-->functions
 
 productContainers.forEach((item, i) => {
+  let style = getComputedStyle(item);
+  let flexGap = Number(style.gap.replace("px", ""));
+  let containerWidth = item.children[1].offsetWidth + flexGap; //second child because in one of the sliders, first child is a dummy element
+  let childrenCount = item.childElementCount;
 
-    let style = getComputedStyle(item);
-    let flexGap = Number(style.gap.replace('px',''));
-    let containerWidth = item.children[1].offsetWidth + flexGap; //second child because in one of the sliders, first child is a dummy element 
-    let childrenCount = item.childElementCount;
+  nxtBtn[i].addEventListener("click", () => {
+    item.scrollLeft += containerWidth;
+    if (item.classList.contains("sliderTypeOne") & (counter < 7)) counter += 1;
+    currentItem.innerHTML = counter;
+  });
 
-    nxtBtn[i].addEventListener('click', () => {
-        item.scrollLeft += containerWidth;  
-        if (item.classList.contains('sliderTypeOne') & counter < 7) counter +=1;
-        currentItem.innerHTML = counter;
-    })
+  preBtn[i].addEventListener("click", () => {
+    item.scrollLeft -= containerWidth;
+    if (item.classList.contains("sliderTypeOne") & (counter > 1)) counter -= 1;
+    currentItem.innerHTML = counter;
+  });
 
-    preBtn[i].addEventListener('click', () => {
-        item.scrollLeft -= containerWidth;
-        if (item.classList.contains('sliderTypeOne') & counter > 1) counter -=1;
-        currentItem.innerHTML = counter;
-    })
-
-    if (item.classList.contains('sliderTypeOne')) totalItems.innerHTML = childrenCount - 2; //-2 because there are two dummy elements
-})
+  if (item.classList.contains("sliderTypeOne"))
+    totalItems.innerHTML = childrenCount - 2; //-2 because there are two dummy elements
+});
 
 mobileRollerTag.forEach((item, i) => {
-    item.addEventListener('click', () => {
+  item.addEventListener("click", () => {
+    if (item.getAttribute("src") === "images/minus.png")
+      item.src = "images/plus.png";
+    else item.src = "images/minus.png";
 
-        if (item.getAttribute("src") === 'images/minus.png') item.src = 'images/plus.png'
-        else item.src = 'images/minus.png';
-        
-        if(contentText[i].classList.contains('blockSeven__textHidden')) contentText[i].classList.remove('blockSeven__textHidden')
-        else contentText[i].classList.add('blockSeven__textHidden')
-    })
-})
+    if (contentText[i].classList.contains("blockSeven__textHidden"))
+      contentText[i].classList.remove("blockSeven__textHidden");
+    else contentText[i].classList.add("blockSeven__textHidden");
+  });
+});
 
 //4.VIDEO
 
@@ -152,18 +183,18 @@ mobileRollerTag.forEach((item, i) => {
 
 //-->variables declaration
 
-    const playButton = document.getElementById("playButtonCustom__546SHD");
-    const videoMargin = screen.width > 950 ? 166 : screen.width < 429 ? 33 : 66; //these numbers are based on what layout looks good on the screen 
-    const video = document.querySelector("#video__GF65F2")
+const playButton = document.getElementById("playButtonCustom__546SHD");
+const videoMargin = screen.width > 950 ? 166 : screen.width < 429 ? 33 : 66; //these numbers are based on what layout looks good on the screen
+const video = document.querySelector("#video__GF65F2");
 
 //-->functions
 
-    playButton.addEventListener("click", () => {
-        video.play();
-        video.setAttribute('controls','true');
-        playButton.style.display = 'none';
-        video.style.width = adjWidthScreen - videoMargin +'px'
-  });
+playButton.addEventListener("click", () => {
+  video.play();
+  video.setAttribute("controls", "true");
+  playButton.style.display = "none";
+  video.style.width = adjWidthScreen - videoMargin + "px";
+});
 
 //5.SCROLLBAR
 
@@ -171,72 +202,82 @@ mobileRollerTag.forEach((item, i) => {
 
 const comparisonTable = document.querySelector("#celek .comparisonTable");
 const comparisonTableWidth = comparisonTable.scrollWidth;
-const comparisonTableDummy = document.querySelector("#celek .comparisonTable__dummy");
-const comparisonTableDummyContainer = document.querySelector("#celek .comparisonTableContainer__dummy");
+const comparisonTableDummy = document.querySelector(
+  "#celek .comparisonTable__dummy"
+);
+const comparisonTableDummyContainer = document.querySelector(
+  "#celek .comparisonTableContainer__dummy"
+);
 
 //-->functions
 
-comparisonTableDummy.style.width = comparisonTableWidth + 'px';
+comparisonTableDummy.style.width = comparisonTableWidth + "px";
 
-comparisonTable.addEventListener('scroll', () => {
-    
-    let userScroll = comparisonTable.scrollLeft
+comparisonTable.addEventListener("scroll", () => {
+  let userScroll = comparisonTable.scrollLeft;
 
-    comparisonTableDummyContainer.scrollLeft = userScroll
-})
+  comparisonTableDummyContainer.scrollLeft = userScroll;
+});
 
-comparisonTableDummyContainer.addEventListener('scroll', () => {
-    
-    let userScroll = comparisonTableDummyContainer.scrollLeft
-    
-    comparisonTable.scrollLeft = userScroll
-})
+comparisonTableDummyContainer.addEventListener("scroll", () => {
+  let userScroll = comparisonTableDummyContainer.scrollLeft;
+
+  comparisonTable.scrollLeft = userScroll;
+});
 
 //6. TABLE
 
-const tableTitle = document.querySelectorAll('.comparisonTable__titleContainer')
-const tableTypeSurface = document.querySelectorAll('.comparisonTable__textOne')
-const tableUseSurface = document.querySelectorAll('.comparisonTable__textTwo')
-const tableFunction = document.querySelectorAll('.comparisonTable__textThree')
+const tableTitle = document.querySelectorAll(
+  ".comparisonTable__titleContainer"
+);
+const tableTypeSurface = document.querySelectorAll(".comparisonTable__textOne");
+const tableUseSurface = document.querySelectorAll(".comparisonTable__textTwo");
+const tableFunction = document.querySelectorAll(".comparisonTable__textThree");
 
-let tableTitleHeight = []
-let tableTypeSurfaceHeight = []
-let tableUseSurfaceHeight = []
-let tableFunctionHeight = []
+let tableTitleHeight = [];
+let tableTypeSurfaceHeight = [];
+let tableUseSurfaceHeight = [];
+let tableFunctionHeight = [];
 
-tableTitle.forEach(item => {
-    tableTitleHeight.push(item.offsetHeight)
-})
+tableTitle.forEach((item) => {
+  tableTitleHeight.push(item.offsetHeight);
+});
 
-tableTypeSurface.forEach(item => {
-    tableTypeSurfaceHeight.push(item.offsetHeight)
-})
+tableTypeSurface.forEach((item) => {
+  tableTypeSurfaceHeight.push(item.offsetHeight);
+});
 
-tableUseSurface.forEach(item => {
-    tableUseSurfaceHeight.push(item.offsetHeight)
-})
+tableUseSurface.forEach((item) => {
+  tableUseSurfaceHeight.push(item.offsetHeight);
+});
 
-tableFunction.forEach(item => {
-    tableFunctionHeight.push(item.offsetHeight)
-})
+tableFunction.forEach((item) => {
+  tableFunctionHeight.push(item.offsetHeight);
+});
 
 window.addEventListener("load", (event) => {
-    tableTitle.forEach(item => {
-        item.style.height = Math.max(...tableTitleHeight) + 'px'
-    })
-    tableTypeSurface.forEach(item => {
-        item.style.height = Math.max(...tableTypeSurfaceHeight) + 'px'
-    })
-    tableUseSurface.forEach(item => {
-        item.style.height = Math.max(...tableUseSurfaceHeight) + 'px'
-    })
-    tableFunction.forEach(item => {
-        item.style.height = Math.max(...tableFunctionHeight) + 'px'
-    })
-    
-    document.querySelector('.comparisonTable__columnMain--typeSurface').style.height = Math.max(...tableTypeSurfaceHeight) + 'px'
-    document.querySelector('.comparisonTable__columnMain--function').style.height = Math.max(...tableFunctionHeight) + 'px'
-    document.querySelector('.comparisonTable__columnMain--useSurface').style.height = Math.max(...tableUseSurfaceHeight) + 'px'
-    document.querySelector('.comparisonTable__blank').style.height = Math.max(...tableTitleHeight) + 'px'
-    
+  tableTitle.forEach((item) => {
+    item.style.height = Math.max(...tableTitleHeight) + "px";
   });
+  tableTypeSurface.forEach((item) => {
+    item.style.height = Math.max(...tableTypeSurfaceHeight) + "px";
+  });
+  tableUseSurface.forEach((item) => {
+    item.style.height = Math.max(...tableUseSurfaceHeight) + "px";
+  });
+  tableFunction.forEach((item) => {
+    item.style.height = Math.max(...tableFunctionHeight) + "px";
+  });
+
+  document.querySelector(
+    ".comparisonTable__columnMain--typeSurface"
+  ).style.height = Math.max(...tableTypeSurfaceHeight) + "px";
+  document.querySelector(
+    ".comparisonTable__columnMain--function"
+  ).style.height = Math.max(...tableFunctionHeight) + "px";
+  document.querySelector(
+    ".comparisonTable__columnMain--useSurface"
+  ).style.height = Math.max(...tableUseSurfaceHeight) + "px";
+  document.querySelector(".comparisonTable__blank").style.height =
+    Math.max(...tableTitleHeight) + "px";
+});
